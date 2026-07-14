@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - World Time Zones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="clock-style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">⏰ World Digital Clock</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container-fluid py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+        <div class="container">
+            <!-- Header -->
+            <div class="text-center mb-5">
+                <h1 class="text-white display-4 fw-bold">World Time Zones</h1>
+                <p class="text-white-50 fs-5">Real-time clocks across different time zones</p>
+            </div>
+
+            <!-- Clocks Grid -->
+            <div class="row g-4">
+                <!-- New York -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>New York</h3>
+                            <span class="timezone-badge">EST/EDT</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-ny">00:00:00</div>
+                            <div class="date" id="date-ny">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-ny"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- London -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>London</h3>
+                            <span class="timezone-badge">GMT/BST</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-london">00:00:00</div>
+                            <div class="date" id="date-london">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-london"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paris -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Paris</h3>
+                            <span class="timezone-badge">CET/CEST</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-paris">00:00:00</div>
+                            <div class="date" id="date-paris">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-paris"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Dubai</h3>
+                            <span class="timezone-badge">GST</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-dubai">00:00:00</div>
+                            <div class="date" id="date-dubai">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-dubai"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tokyo -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Tokyo</h3>
+                            <span class="timezone-badge">JST</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-tokyo">00:00:00</div>
+                            <div class="date" id="date-tokyo">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-tokyo"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sydney -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Sydney</h3>
+                            <span class="timezone-badge">AEDT/AEST</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-sydney">00:00:00</div>
+                            <div class="date" id="date-sydney">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-sydney"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Singapore -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Singapore</h3>
+                            <span class="timezone-badge">SGT</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-singapore">00:00:00</div>
+                            <div class="date" id="date-singapore">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-singapore"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hong Kong -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Hong Kong</h3>
+                            <span class="timezone-badge">HKT</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-hongkong">00:00:00</div>
+                            <div class="date" id="date-hongkong">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-hongkong"></small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Los Angeles -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="clock-card">
+                        <div class="clock-header">
+                            <h3>Los Angeles</h3>
+                            <span class="timezone-badge">PST/PDT</span>
+                        </div>
+                        <div class="clock-display">
+                            <div class="time" id="time-la">00:00:00</div>
+                            <div class="date" id="date-la">Loading...</div>
+                        </div>
+                        <div class="clock-footer">
+                            <small id="offset-la"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Time -->
+            <div class="row mt-5">
+                <div class="col-md-8 mx-auto">
+                    <div class="local-time-card">
+                        <h2 class="text-center mb-3">Your Local Time</h2>
+                        <div class="text-center">
+                            <div class="local-time" id="local-time">00:00:00</div>
+                            <div class="local-date" id="local-date">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 World Digital Clock. All times update in real-time.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="clock-script.js"></script>
+</body>
+</html>
