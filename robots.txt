@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /Esanin/
+Allow: /Esanin/index.html
+Allow: /Esanin/clock.html
+Allow: /Esanin/sitemap.xml
+
+Disallow: /search/
+Disallow: /admin/
+
+Sitemap: https://raw.githubusercontent.com/hinayatshahi-lab/Esanin/main/sitemap.xml
+Sitemap: https://hinayatshahi-lab.github.io/Esanin/sitemap.xml
